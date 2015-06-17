@@ -14,7 +14,7 @@ module.exports = React.createClass({
 
   route: function(event){
 
-    if(event.getModifierState('Shift') || event.getModifierState('Alt') || event.getModifierState('Control') || event.getModifierState('Meta') || event.button > 1) {return;}
+    if(event.getModifierState('Shift') || event.getModifierState('Alt') || event.getModifierState('Control') || event.getModifierState('Meta') || event.button > 0) {return;}
 
     event.preventDefault();
 
@@ -58,7 +58,7 @@ module.exports = React.createClass({
     props.moveThreshold = 5;
     props.component = props.component || 'a';
     props.onClick = function(event){
-      if(event.getModifierState('Shift') || event.getModifierState('Alt') || event.getModifierState('Control') || event.getModifierState('Meta') || event.button > 1) {return;}
+      if(event.getModifierState('Shift') || event.getModifierState('Alt') || event.getModifierState('Control') || event.getModifierState('Meta') || event.button > 0) {return;}
       event.preventDefault()
     }
     props.onKeyUp = this.routeOnEnter
